@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carro</title>
+    <style>
+    body{
+        display: flex;/* usa flexbox para centralizar conteúdos*/
+        justify-content:center ;/*centralizar horizontalmente */
+        align-items: center;/*centralizar verticalmente*/
+        min-height: 100vh; /*altura mínima da página é 100% da viewport*/
+        background-color: rgb(202, 219, 233);
+    }
+    .carro{             
+        position: relative;
+        animation: movercarro 5s linear infinite;
+    }
+    .corpo{
+       width: 200px;
+       height: 100px;
+       background-color: blueviolet;
+       border-radius: 20px 600px 30px 20px;
+    }
+    .roda{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: black;
+        border-radius: 35% ; 
+        animation: spin 1ms linear infinite;
+    }
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+       
+    }
+    @keyframes movercarro{/*inicia a definição de uma animação chamada moverCarro*/
+        0%{
+            transform: translateX(0);/*inicia a movimantação na horizontal*/
+        }
+        100%{
+            transform: translateX(100vw);/*move o caro para direita */
+        }
+
+    }
+    #roda1{
+        left: 20px;
+
+    }
+    #roda2{
+        right: 20px;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="carro">
+        <div class="corpo"></div>
+        <div class="roda" id="roda1"></div>
+        <div class="roda" id="roda2"></div>
+    </div>
+</body>
+</html>

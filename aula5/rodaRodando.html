@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roda</title>
+    <style>
+         body{
+        display: flex;/* usa flexbox para centralizar conteúdos*/
+        justify-content:center ;/*centralizar horizontalmente */
+        align-items: center;/*centralizar verticalmente*/
+        min-height: 100vh; /*altura mínima da página é 100% da viewport*/
+        background-color: rgb(202, 219, 233);
+    }
+        .roda{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            animation: girar 2s linear infinite;
+        }
+        .ponto{
+            position: absolute;
+            top: 10%;
+            left: 45%;
+            width: 10%;
+            height: 10%;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+
+        }
+        .pneu{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: black;
+        }
+        .calota{
+            position: absolute; 
+            top: 25%;
+            left: 25%;
+            width: 50%;
+            height: 50%;
+            background-color: silver;
+            border-radius: 50%;
+            
+        }
+        @keyframes girar{
+            from{
+                transform: roteta(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="roda">
+        <div class="pneu"></div>
+        <div class="calota"></div>
+        <div class="ponto"></div>
+        
+</body>
+</html>
