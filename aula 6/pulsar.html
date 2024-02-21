@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circulo Pulsante</title>
+    <style>
+        body{
+            display: flex;/* usa flexbox para centralizar conteúdos*/
+        justify-content:center ;/*centralizar horizontalmente */
+        align-items: center;/*centralizar verticalmente*/
+        min-height: 100vh; /*altura mínima da página é 100% da viewport*/
+        background-color: rgb(202, 219, 233);
+        }
+      
+        @keyframes pulse{
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.1);
+            }
+            100%{
+                transform: scale(1) ;
+            }
+        
+        }
+        .heart {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+        
+        animation: pulse .3s infinite;
+    }
+    .heart::before,
+    .heart::after {
+        content: '';
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+    }
+    .heart::before {
+        top:  -50px;
+        left: 0;
+    }
+    .heart::after {
+        top: 0;
+        left: 50px;
+    }
+    </style>
+</head>
+<body>
+    <p>                                       criar um circulo pulsante continuamente</p>
+    <div class="circulo"></div>
+    <div class="heart"></div>
+</body>
+</html>

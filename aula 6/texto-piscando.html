@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>texto piscando</title>
+    <style>
+         body{
+            
+            display: flex;/* usa flexbox para centralizar conteúdos*/
+        justify-content:center ;/*centralizar horizontalmente */
+        align-items: center;/*centralizar verticalmente*/
+        min-height: 100vh; /*altura mínima da página é 100% da viewport*/
+        background-image: linear-gradient(to left, rgb(118, 159, 219),rgb(76, 187, 85), rgb(67, 131, 216) );
+       
+        }
+
+        p{
+            color: rgb(236, 15, 118);
+            font-size: 100px;
+            animation: texto 0.5s infinite;
+        }
+        @keyframes texto{
+            0%{opacity: 1;}
+            50%{opacity: 0;}
+            100%{opacity: 1;}
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="texto-piscando"></div>
+    <p>O QUE POSSO ESCREVER </p>
+   
+</body>
+</html>

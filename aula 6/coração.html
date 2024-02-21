@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coração</title>
+   <style>
+         body{
+            
+            display: flex;/* usa flexbox para centralizar conteúdos*/
+        justify-content:center ;/*centralizar horizontalmente */
+        align-items: center;/*centralizar verticalmente*/
+        min-height: 100vh; /*altura mínima da página é 100% da viewport*/
+        background-image: linear-gradient(to left, rgb(118, 159, 219),rgb(39, 34, 34), rgb(37, 33, 33), rgb(67, 131, 216) );
+       
+        }
+        @keyframes moverheart{
+       
+      
+            0%{
+                transform: scale(1) rotate(-45deg);;
+            }
+            50%{
+                transform: scale(1.5) rotate(-45deg);;
+            }
+            100%{
+                transform: scale(1) rotate(-45deg);;
+            }
+        
+        }
+          .heart {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+        
+        animation: moverheart 3s linear infinite;
+    }
+    .heart::before,
+    .heart::after {
+        content: '';
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+    }
+    .heart::before {
+        top:  -50px;
+        left: 0;
+    }
+    .heart::after {
+        top: 0;
+        left: 50px;
+    }  
+   
+    </style>
+</head>
+<body>
+    <div class="heart">
+        <div class="vein left"></div>
+    <div class="vein right"></div>
+    </div>
+</body>
+</html>
