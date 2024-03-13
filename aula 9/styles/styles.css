@@ -1,5 +1,10 @@
+*{
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
 body{
-    background-color: aqua;
+    background-color: rgb(58, 134, 233);
     display: grid;
     grid-template-rows:82vh 13vh 5vh;
 }
@@ -7,6 +12,27 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(231, 116, 116);
+    background-color: rgb(48, 138, 165);
     gap: 10px;
+    box-shadow: 0 3px 20px rgb(216, 3, 49);
+    border-radius: 20px;
+}
+.container img {
+    margin-top: 5px;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10%;
+    border: none;
+    padding: 3px 3px ;
+    border-radius: 50px;
+    background:  #333;
+    color: #0f37e9;
+    
+    box-shadow: 0 3px 20px rgb(216, 3, 21);
+}
+  .container img:hover{
+    cursor: pointer;
+    background-color: rgb(103, 231, 231);
+    font-size: 50px;
+  
 }
